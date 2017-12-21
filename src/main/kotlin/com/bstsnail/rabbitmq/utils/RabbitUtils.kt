@@ -11,4 +11,14 @@ object RabbitUtils {
         factory.port = 5672
         return factory.newConnection()
     }
+
+    fun sodaConnection(): Connection {
+        val factory = ConnectionFactory()
+        factory.host = "10.125.48.80"
+        factory.port = 5672
+        factory.username = "..."
+        factory.password = "..."
+        factory.virtualHost = "soda34"
+        return factory.newConnection()
+    }
 }
